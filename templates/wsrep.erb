@@ -1,0 +1,6 @@
+[mysqld]
+wsrep_cluster_address='gcomm://<%= @primaryhost %>'
+wsrep_node_address=<%= @swift_local_net_ip %>
+wsrep_provider=/usr/lib/galera/libgalera_smm.so
+wsrep_sst_method=rsync
+wsrep_sst_receive_address=<%= @swift_local_net_ip %>
