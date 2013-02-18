@@ -9,13 +9,13 @@ class galera {
   $dbfile="mysql-server-wsrep-5.5.28-23.7-amd64.deb"
   $libfile="galera-23.2.2-amd64.deb"
 
-#  file{'/var/log/mysql':
-#    require     =>      Package['galera'],
-#    ensure	=>	directory,
-#    owner	=>	'root',
-#    group	=>	'root',
-#    mode	=>	'0755',
-#  }
+  file{'/var/log/mysql':
+    require     =>      Package['galera'],
+    ensure	=>	directory,
+    owner	=>	'root',
+    group	=>	'root',
+    mode	=>	'0755',
+  }
 
   package { galera:
     ensure => installed,
